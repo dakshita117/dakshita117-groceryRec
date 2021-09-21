@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Recommendation System</h1>
+    <form method="POST" , action="{{url_for('predict')}}">
+      First value :
+      <input type="int" , name="a" , placeholder="Number between 0-100" />
+      <input type="submit" , value="predict!" />
+    </form>
+  </body>
+</html>
