@@ -44,6 +44,24 @@ a:hover {
 .navbar-brand:hover {
   color: #fff;
 }
+.aa 
+{
+  margin-top: 14px;
+}
+
+.GoogleLogo {
+  position:absolute;
+  TOP:125px;
+  LEFT:575px;
+}
+
+.SearchBar {
+  position: centre;
+  top: 355px;
+  left: 575px;
+  height: 30px;
+  width: 350px;
+}
 
 /*-----------------------------------
 	Breadcrumb 

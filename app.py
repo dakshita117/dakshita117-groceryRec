@@ -23,7 +23,7 @@ def recommendersystem(user_id):
 
     recommendations = pd.Series(
         np.dot(p.values, cosine_dists[user_id]), index=p.index)
-    return recommendations.sort_values(ascending=False).head(15)
+    return recommendations.sort_values(ascending=False).head(8)
 
 
 def prediction(person):
