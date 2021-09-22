@@ -4,13 +4,19 @@
     <title>Home</title>
   </head>
   
-      <h1>PREDICTION :</h1>
-
-      {% print(pred) %}
-
+      <h1>Predictions :</h1>
+      <ul>
+        {%for item in pred%}
+        <li>{{item}}</li>
+        {%endfor%}
+      </ul>
       <br /><br />
-      <h1>Previously Ordered Items :</h1>
-      {% print(orders) %}
+      <h1>All Previously Ordered Items :</h1>
+      <ul>
+        {%for item in orders%}
+        <li>{{item}}</li>
+        {%endfor%}
+      </ul>
       <br /><br />
       <a href="/">go back to home page</a>
   </body>
