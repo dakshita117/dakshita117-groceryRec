@@ -1,23 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom.css') }}"
+    />
   </head>
-  
-      <h1>Predictions :</h1>
-      <ul>
-        {%for item in pred%}
-        <li>{{item}}</li>
-        {%endfor%}
-      </ul>
-      <br /><br />
-      <h1>All Previously Ordered Items :</h1>
-      <ul>
-        {%for item in orders%}
-        <li>{{item}}</li>
-        {%endfor%}
-      </ul>
-      <br /><br />
-      <a href="/">go back to home page</a>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">TRILOGY</a>
+        <div class="navbar-right">
+          <div class="container minicart"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid breadcrumbBox text-center">
+      <ol class="breadcrumb">
+        <li class="active"></li>
+      </ol>
+    </div>
+
+    <div class="container text-center">
+      <div class="col-md-5 col-sm-12">
+        <ul>
+          <li class="row list-inline columnCaptions">
+            <span>OUR RECOMMENDATION</span>
+          </li>
+          {%for item in pred%}
+          <li class="row">
+            <span class="itemName">{{item}}</span>
+          </li>
+          {%endfor%}
+        </ul>
+      </div>
+
+      <div class="col-md-7 col-sm-12 text-left">
+        <ul>
+          <li class="row list-inline columnCaptions">
+            <span>PREVIOUSLY ORDERED</span>
+          </li>
+          {%for item in orders%}
+          <li class="row">
+            <span class="itemName">{{item}}</span>
+          </li>
+          {%endfor%}
+        </ul>
+      </div>
+    </div>
+
+    <!-- The popover content -->
+
+    <div id="popover" style="display: none">
+      <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+
+    <!-- JavaScript includes -->
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/customjs.js"></script>
   </body>
 </html>
