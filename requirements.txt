@@ -94,7 +94,6 @@ protobuf==3.11.3
 py==1.10.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 pycodestyle==2.6.0
 pydocstyle==5.0.2
 pyflakes==2.2.0
